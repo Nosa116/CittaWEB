@@ -1,0 +1,189 @@
+/* Google Font already linked in <head> */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+
+body {
+  font-family: 'Rethink Sans', sans-serif;
+  line-height: 1.6;
+  color: #030B1D;
+  background-color: #fff;
+}
+
+
+
+.logo {
+  font-size: 40px;
+  font-weight: inherit;
+}
+
+.logo .blue {
+  color: #0196D2; 
+  font-family: 'Brush Script MT', cursive;
+}
+
+.logo .yellow {
+  color: #FFBA08; 
+  font-family: 'Brush Script MT', cursive;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #030B1D;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.nav-links a:hover {
+  background-color: #f1f1f1;
+  border-radius: 20px;
+}
+
+.nav-links .active {
+  background-color: #FFBA08;
+  border-radius: 20px;
+}
+
+.nav-links .demo-btn {
+  background-color: #FFBA08;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 14px 24px;  
+  font-weight: bold;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: white;
+  padding: 20px 0; /* only vertical padding */
+}
+
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* HERO */
+.hero {
+  padding: 60px 0; /* remove horizontal padding */
+  min-height: calc(100vh - 80px);
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+/* ERP SECTION */
+.erp-section {
+  background-color: #F9FBFC;
+  padding: 80px 0; /* remove horizontal padding */
+}
+
+.erp-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* end */
+
+
+.content {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.content h1 {
+  font-size: 55px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #030B1D;
+}
+
+.content .desc {
+  color: #030B1D;
+  font-size: 20px;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.content .highlight {
+  color: #030B1D;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  text-decoration: none;
+  background-color: #FFBA08;
+  color: #030B1D;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 20px;
+}
+
+
+
+
+.erp-text {
+  flex: 1;
+}
+
+.erp-text h2 {
+  font-size: 45px;
+  color: #030B1D;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.erp-text p {
+  font-size: 18px;
+  color: #030B1D;
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+.erp-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.erp-image img {
+  width: 100%;
+  max-width: 500px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  object-fit: cover;
+}
+
