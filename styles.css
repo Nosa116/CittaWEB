@@ -45,15 +45,45 @@ body {
   border-radius: 6px;
 }
 
-.nav-links a:hover {
-  background-color: #f1f1f1;
-  border-radius: 20px;
+.nav-links a {
+  position: relative;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #030B1D;
+  padding: 8px 4px;
+  transition: color 0.3s ease;
 }
 
-.nav-links .active {
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
   background-color: #FFBA08;
-  border-radius: 20px;
+  transition: width 0.3s ease;
 }
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #FFBA08;
+}
+
+/* Active */
+.nav-links .active {
+  font-weight: 700;
+  color: #FFBA08;
+}
+
+.nav-links .active::after {
+  width: 100%;
+}
+
 
 .nav-links .demo-btn {
   background-color: #FFBA08;
