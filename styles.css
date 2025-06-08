@@ -120,21 +120,6 @@ body {
   gap: 50px;
 }
 
-/* ERP SECTION */
-.erp-section {
-  background-color: #F9FBFC;
-  padding: 80px 0;
-  /* remove horizontal padding */
-}
-
-.erp-content {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-}
-
-/* end */
-
 
 .content {
   flex: 1;
@@ -186,10 +171,22 @@ body {
 }
 
 
+/* ERP SECTION */
+.erp-section {
+  background-color: #F9FBFC;
+  padding: 80px 0;
+  /* remove horizontal padding */
+}
+
+.erp-content {
+  display: block;
+  align-items: center;
+  gap: 50px;
+}
 
 
 .erp-text {
-  flex: 1;
+  max-width: 100%;
 }
 
 .erp-text h2 {
@@ -203,22 +200,10 @@ body {
   font-size: 20px;
   color: #030B1D;
   line-height: 1.7;
-  max-width: 600px;
+  max-width: 100%;
 }
 
-.erp-image {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.erp-image img {
-  width: 100%;
-  max-width: 500px;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  object-fit: cover;
-}
+/* end */
 
 
 /* Hamburger style (hidden on large screens) */
