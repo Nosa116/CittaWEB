@@ -407,6 +407,211 @@ body {
   background: #F8FAFD;
 }
 
+/* CTA Section */
+.cta-section {
+  background-color: #FFBA08;
+  padding: 80px 0;
+}
+
+.cta-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.cta-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.cta-text h2 span {
+  background-color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #030B1D;
+}
+
+.cta-text p {
+  margin: 20px 0;
+  font-size: 16px;
+  color: #030B1D;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  background-color: white;
+  color: #030B1D;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cta-image {
+  flex: 1;
+  text-align: center;
+}
+
+.cta-image img {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #030B1D;
+  color: white;
+  padding: 60px 0;
+  font-size: 14px;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* --- TOP ROW --- */
+.footer-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-brand h3 {
+  font-size: 18px;
+  margin: 0;
+  color: white;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.footer-icons a:hover {
+  background-color: #FFBA08;
+}
+
+.footer-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+
+/* --- MAIN SECTION --- */
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-contact {
+  flex: 1;
+  min-width: 220px;
+}
+
+.contact-label {
+  background-color: #FFBA08;
+  color: black;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.footer-newsletter {
+  background-color: white;
+  border-radius: 12px;
+  padding: 12px 20px; /* smaller top/bottom for tighter vertical centering */
+  max-width: 550px;
+  flex: 1;
+  display: flex;
+  align-items: center; /* ✅ vertical centering of inner form */
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center; /* ✅ ensure children are vertically centered */
+  width: 100%;
+  gap: 10px;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  height: 48px; /* ✅ forces same height as button */
+}
+
+.newsletter-form button {
+  background-color: #FFBA08;
+  color: #030B1D;
+  font-weight: normal;
+  padding: 0 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  height: 48px; /* ✅ match input height */
+}
+
+
+/* --- BOTTOM BAR --- */
+.footer-bottom {
+  border-top: 1px solid #555;
+  padding-top: 20px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: underline;
+}
+
 
 /* Responsive styles */
 @media (max-width: 768px) {
