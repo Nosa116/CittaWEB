@@ -615,9 +615,13 @@ body {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .navbar-inner {
-    flex-direction: row;
-    /* ✅ Stay in a row */
+   .navbar-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar-top {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -636,6 +640,7 @@ body {
     width: 100%;
     background-color: white;
     margin-top: 10px;
+    padding: 10px 0;
   }
 
   .nav-links.show {
@@ -643,11 +648,25 @@ body {
   }
 
   .nav-links a {
-    padding: 12px 0;
+    padding: 12px 20px;
     font-size: 16px;
     border-top: 1px solid #eee;
+    width: 100%;
+    text-align: left;
   }
   .erp-image {
     display: none;
+  }
+
+  .cta-image {
+    display: none;
+  }
+  
+   .cta-text {
+    text-align: center;
+  }
+
+  .cta-text h2 span {
+    display: inline-block;
   }
 }
