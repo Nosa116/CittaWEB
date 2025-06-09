@@ -460,6 +460,7 @@ body {
 .cta-image img {
   width: 100%;
   max-width: 300px;
+  
 }
 
 /* Footer Section */
@@ -661,7 +662,7 @@ body {
   .cta-image {
     display: none;
   }
-  
+
    .cta-text {
     text-align: center;
   }

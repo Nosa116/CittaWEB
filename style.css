@@ -203,3 +203,100 @@ header.navbar {
   color: #030B1D;
   line-height: 1.7;
 }
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  .hero-content {
+    padding: 0 40px;
+    margin-bottom: 150px;
+  }
+
+  .impact-section {
+    padding: 60px 40px;
+  }
+
+  .About-us-section {
+    padding: 80px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  header.navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-content {
+    margin-bottom: 100px;
+    padding: 0 30px;
+  }
+
+  .impact-section {
+    padding: 60px 30px;
+  }
+
+  .impact-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .About-us-section {
+    padding: 60px 30px;
+  }
+
+  .About-us-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .About-us-header p {
+    max-width: 100%;
+  }
+
+  .About-us-columns {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .impact-number {
+    font-size: 36px;
+  }
+
+  .impact-label {
+    font-size: 14px;
+  }
+
+  .About-us-section {
+    padding: 50px 20px;
+  }
+
+  .About-us-header p,
+  .column {
+    font-size: 16px;
+  }
+
+  .section-heading {
+    font-size: 24px;
+  }
+}
