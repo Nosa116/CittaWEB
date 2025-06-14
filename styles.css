@@ -216,7 +216,7 @@ body {
 
 .section-heading {
   font-size: 32px;
-  font-weight: 800;
+  font-weight: 700;
   background-color: #FFBA08;
   padding: 0 12px;
   border-radius: 10px;
@@ -576,7 +576,7 @@ body {
 
 .newsletter-form input[type="email"] {
   flex: 1;
-  padding: 12px 16px;
+  padding: 0px 16px;
   border: 1px solid #ccc;
   border-radius: 10px;
   font-size: 14px;
@@ -588,7 +588,7 @@ body {
   background-color: #FFBA08;
   color: #030B1D;
   font-weight: normal;
-  padding: 0 16px;
+  padding: 0px 16px;
   border: none;
   border-radius: 10px;
   font-size: 14px;
@@ -612,7 +612,6 @@ body {
   color: #fff;
   text-decoration: underline;
 }
-
 
 
 /* Responsive styles */

@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   color: white;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .overlay {
@@ -162,7 +162,7 @@ header.navbar {
 
 .section-heading {
   font-size: 32px;
-  font-weight: 800;
+  font-weight: 700;
   background-color: #FFBA08;
   padding: 0 12px;
   border-radius: 10px;
@@ -287,61 +287,157 @@ header.navbar {
 
 
 
-  .services-section {
-    background-color: #F8FAFD;
-    padding: 100px 60px;
+.services-section {
+  background-color: #F8FAFD;
+  padding: 100px 60px;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  text-align: left;
+}
+
+.service-item {
+  background-color: #F8FAFD;
+  padding: 20px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: white;
+}
+
+.service-number {
+  color: #030B1D;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.service-title {
+  font-size: 24px;
+  line-height: 1.3;
+  margin: 0 0 20px;
+  font-weight: 500;
+}
+
+.service-description {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.join-team-section {
+  background-color: #FFBA08;
+  padding: 0;
+}
+
+.join-team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  min-height: 500px;
+}
+
+.join-team-text {
+  padding: 60px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFBA08;
+}
+
+.join-team-text h2 span {
+  background-color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #030B1D;
+}
+
+.highlighted-text {
+  background: white;
+  padding: 0 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  display: inline;
+  line-height: 1.5;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+
+
+.join-team-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.join-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  width: fit-content;
+}
+
+.join-button:hover {
+  background-color: #e6e6e6;
+}
+
+.join-team-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.join-team-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .join-team-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .join-team-image {
+    height: 300px;
+  }
+
+  .join-team-text {
+    padding: 40px 20px;
     text-align: left;
   }
 
-  .section-title {
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 60px;
+  .join-team-text h2 {
+    font-size: 28px;
   }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-    text-align: left;
-  }
-
-  .service-item {
-    background-color: #F8FAFD;
-    padding: 20px;
-    border-radius: 8px;
-    transition: box-shadow 0.3s ease;
-  }
-
-  .service-item:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    background-color: white;
-  }
-
-  .service-number {
-    color: #4caf50;
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-
-  .service-title {
-    font-size: 24px;
-    line-height: 1.3;
-    margin: 0 0 20px;
-    font-weight: 500;
-  }
-
-  .service-description {
-    font-size: 16px;
-    color: #444;
-    line-height: 1.6;
-  }
-
-  strong {
-    font-weight: 600;
-  }
-
-
+}
 
 /* Footer Section */
 .footer {
@@ -440,40 +536,45 @@ header.navbar {
 .footer-newsletter {
   background-color: white;
   border-radius: 12px;
-  padding: 12px 20px; /* smaller top/bottom for tighter vertical centering */
+  padding: 12px 20px;
+  /* smaller top/bottom for tighter vertical centering */
   max-width: 550px;
   flex: 1;
   display: flex;
-  align-items: center; /* ✅ vertical centering of inner form */
+  align-items: center;
+  /* ✅ vertical centering of inner form */
 }
 
 .newsletter-form {
   display: flex;
-  align-items: center; /* ✅ ensure children are vertically centered */
+  align-items: center;
+  /* ✅ ensure children are vertically centered */
   width: 100%;
   gap: 10px;
 }
 
 .newsletter-form input[type="email"] {
   flex: 1;
-  padding: 12px 16px;
+  padding: 5px 16px;
   border: 1px solid #ccc;
   border-radius: 10px;
   font-size: 14px;
   outline: none;
-  height: 48px; /* ✅ forces same height as button */
+  height: 48px;
+  /* ✅ forces same height as button */
 }
 
 .newsletter-form button {
   background-color: #FFBA08;
   color: #030B1D;
   font-weight: normal;
-  padding: 0 16px;
+  padding: 0px 16px;
   border: none;
   border-radius: 10px;
   font-size: 14px;
   cursor: pointer;
-  height: 48px; /* ✅ match input height */
+  height: 59.6px;
+  /* ✅ match input height */
 }
 
 
@@ -493,13 +594,30 @@ header.navbar {
   text-decoration: underline;
 }
 
-
-
-  @media (max-width: 768px) {
-    .section-title {
-      font-size: 28px;
-    }
+@media (max-width: 768px) {
+  .section,
+  .hero-content,
+  .impact-section,
+  .About-us-section,
+  .Values-section,
+  .services-section,
+  .footer,
+  .join-team-text {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
+
+  .nav-links a:first-child {
+  margin-left: 0;
+}
+}
+
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+}
 
 
 
@@ -524,7 +642,7 @@ header.navbar {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-    padding: 20px 30px;
+    padding: 20px 20px;
   }
 
   .hero-content h1 {
