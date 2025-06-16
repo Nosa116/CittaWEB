@@ -11,6 +11,9 @@
   padding: 0 50px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Rethink Sans', sans-serif;
@@ -95,10 +98,23 @@ body {
 
 /* NAVBAR */
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
   background-color: white;
   padding: 20px 0;
-  /* only vertical padding */
 }
+
+.navbar.scrolled {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+section[id],
+main[id] {
+  scroll-margin-top: 100px;
+  /* adjust this based on your navbar height */
+}
+
 
 .navbar-inner {
   display: flex;
@@ -321,7 +337,7 @@ body {
 .industry-cards {
   display: flex;
   gap: 40px;
-  overflow-x: hidden; 
+  overflow-x: hidden;
   scroll-behavior: smooth;
   padding-bottom: 20px;
   scroll-snap-type: x mandatory;
@@ -359,7 +375,8 @@ body {
 
 @media (min-width: 768px) {
   .industry-card {
-    flex: 0 0 48%; /* show 2 cards side-by-side on desktop */
+    flex: 0 0 48%;
+    /* show 2 cards side-by-side on desktop */
     max-width: 48%;
   }
 }
@@ -655,7 +672,13 @@ body {
 
 /* Responsive styles */
 @media (max-width: 768px) {
- .navbar-inner {
+
+  .navbar {
+    overflow: visible;
+    /* Ensure dropdown is visible */
+  }
+
+  .navbar-inner {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
@@ -676,16 +699,20 @@ body {
     color: #030B1D;
   }
 
-  
-
   .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
     background-color: white;
-    margin-top: 0; /* 🔧 remove if spacing appears above dropdown */
+    margin-top: 0;
     padding: 10px 0;
     border-top: 1px solid #eee;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    /* Higher than navbar */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.show {
@@ -693,29 +720,12 @@ body {
   }
 
   .nav-links a {
-    padding: 12px 20px;
-    font-size: 16px;
-    border-top: 1px solid #eee;
-    width: 100%;
-    text-align: left;
-  }
-  
- .nav-links {
-    background-color: #ffffff;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    padding: 10px 0;
-    border-top: 1px solid #eee;
-  }
-
-  .nav-links a {
-    margin: 0; /* Remove desktop left-margin */
+    margin: 0;
     padding: 14px 20px;
     width: 100%;
     border: none;
     border-top: 1px solid #eee;
-    border-radius: 0; /* Remove border radius */
+    border-radius: 0;
     font-size: 16px;
     color: #030B1D;
     text-align: left;
@@ -725,7 +735,7 @@ body {
 
   .nav-links a:hover::after,
   .nav-links .active::after {
-    display: none; /* No underline animation */
+    display: none;
   }
 
   .nav-links a:hover {

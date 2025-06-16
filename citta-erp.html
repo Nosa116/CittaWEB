@@ -23,7 +23,7 @@
         <div class="hamburger" id="hamburger">&#9776;</div>
       </div>
       <nav class="nav-links" id="nav-links">
-        <a href="#" class="active">CittaERP</a>
+        <a href="#home" class="active">Home</a>
         <a href="#Benefits">Benefits</a>
         <a href="#Industry">Industry</a>
         <a href="#" class="demo-btn">Request Demo</a>
@@ -33,7 +33,7 @@
 
 
   <!-- HERO -->
-  <main class="hero">
+  <main id="home" class="hero">
     <div class="container hero-content">
       <section class="content">
         <h1>Streamline Business.<br>Elevate Performance.</h1>
@@ -282,18 +282,10 @@
     </div>
   </footer>
 
-
-
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-  </script>
+ 
 
   <script src="carousel.js"></script>
+  <script src="section-scroll.js"></script>
 
 
 </body>
