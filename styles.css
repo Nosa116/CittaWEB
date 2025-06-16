@@ -148,7 +148,7 @@ body {
   margin-bottom: 30px;
 }
 
-.cta-btn {
+.cta-btn-1 {
   text-decoration: none;
   background-color: #FFBA08;
   color: #030B1D;
@@ -221,6 +221,7 @@ body {
   padding: 0 12px;
   border-radius: 10px;
 }
+
 .benefits-section {
   padding: 100px 0;
   border-bottom: 1px solid #030B1D;
@@ -313,22 +314,54 @@ body {
   max-width: 1000px;
 }
 
+.industry-carousel-wrapper {
+  position: relative;
+}
+
 .industry-cards {
   display: flex;
   gap: 40px;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
+  overflow-x: hidden; 
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+  scroll-snap-type: x mandatory;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
+
 .industry-card {
-  flex: 1;
-  min-width: 300px;
+  flex: 0 0 100%;
+  max-width: 100%;
+  scroll-snap-align: start;
   background-color: #F4F4F4;
   padding: 30px;
   border-radius: 20px;
-  border: 1px solid #030B1D;
-  box-shadow: 0 4.5px 0 #030B1D;
+  border: 1px solid #B0B0B0;
+  box-shadow: 0 6px 0 #030B1D;
+}
 
+.scroll-indicator {
+  width: 100%;
+  height: 4px;
+  background-color: #e0e0e0;
+  margin-top: 10px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.scroll-bar {
+  height: 100%;
+  background-color: #FFBA08;
+  width: 0%;
+  transition: width 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .industry-card {
+    flex: 0 0 48%; /* show 2 cards side-by-side on desktop */
+    max-width: 48%;
+  }
 }
 
 .industry-card:hover {
@@ -380,6 +413,7 @@ body {
 
 .nav-controls {
   display: flex;
+  padding-top: 20px;
   gap: 20px;
 }
 
@@ -460,7 +494,7 @@ body {
 .cta-image img {
   width: 100%;
   max-width: 300px;
-  
+
 }
 
 /* Footer Section */
@@ -560,16 +594,19 @@ body {
 .footer-newsletter {
   background-color: white;
   border-radius: 12px;
-  padding: 12px 20px; /* smaller top/bottom for tighter vertical centering */
+  padding: 12px 20px;
+  /* smaller top/bottom for tighter vertical centering */
   max-width: 550px;
   flex: 1;
   display: flex;
-  align-items: center; /* ✅ vertical centering of inner form */
+  align-items: center;
+  /* ✅ vertical centering of inner form */
 }
 
 .newsletter-form {
   display: flex;
-  align-items: center; /* ✅ ensure children are vertically centered */
+  align-items: center;
+  /* ✅ ensure children are vertically centered */
   width: 100%;
   gap: 10px;
 }
@@ -581,7 +618,8 @@ body {
   border-radius: 10px;
   font-size: 14px;
   outline: none;
-  height: 48px; /* ✅ forces same height as button */
+  height: 48px;
+  /* ✅ forces same height as button */
 }
 
 .newsletter-form button {
@@ -593,7 +631,8 @@ body {
   border-radius: 10px;
   font-size: 14px;
   cursor: pointer;
-  height: 48px; /* ✅ match input height */
+  height: 48px;
+  /* ✅ match input height */
 }
 
 
@@ -616,9 +655,10 @@ body {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-   .navbar-inner {
+ .navbar-inner {
     flex-direction: column;
     align-items: stretch;
+    width: 100%;
   }
 
   .navbar-top {
@@ -626,6 +666,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 10px 0;
   }
 
   .hamburger {
@@ -635,13 +676,16 @@ body {
     color: #030B1D;
   }
 
+  
+
   .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
     background-color: white;
-    margin-top: 10px;
+    margin-top: 0; /* 🔧 remove if spacing appears above dropdown */
     padding: 10px 0;
+    border-top: 1px solid #eee;
   }
 
   .nav-links.show {
@@ -655,6 +699,63 @@ body {
     width: 100%;
     text-align: left;
   }
+  
+ .nav-links {
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+  }
+
+  .nav-links a {
+    margin: 0; /* Remove desktop left-margin */
+    padding: 14px 20px;
+    width: 100%;
+    border: none;
+    border-top: 1px solid #eee;
+    border-radius: 0; /* Remove border radius */
+    font-size: 16px;
+    color: #030B1D;
+    text-align: left;
+    background: none;
+    position: relative;
+  }
+
+  .nav-links a:hover::after,
+  .nav-links .active::after {
+    display: none; /* No underline animation */
+  }
+
+  .nav-links a:hover {
+    background-color: #f9f9f9;
+    color: #FFBA08;
+  }
+
+  .nav-links .active {
+    background-color: #FFF3D4;
+    font-weight: bold;
+    color: #FFBA08;
+  }
+
+  .nav-links .demo-btn {
+    background-color: transparent;
+    color: #FFBA08;
+    border: 2px solid #FFBA08;
+    padding: 12px 20px;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+
+  .nav-links .demo-btn:hover {
+    background-color: #FFBA08;
+    color: #030B1D;
+  }
+
   .erp-image {
     display: none;
   }
@@ -663,7 +764,7 @@ body {
     display: none;
   }
 
-   .cta-text {
+  .cta-text {
     text-align: center;
   }
 
