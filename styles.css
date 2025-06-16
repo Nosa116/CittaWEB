@@ -669,6 +669,28 @@ main[id] {
   text-decoration: underline;
 }
 
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #FFBA08;
+  color: #030B1D;
+  font-size: 24px;
+  padding: 6px 20px;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  text-decoration: none;
+}
+#backToTop:hover {
+  background-color: #0196D2;
+  color: white;
+}
+
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -764,6 +786,10 @@ main[id] {
   .nav-links .demo-btn:hover {
     background-color: #FFBA08;
     color: #030B1D;
+  }
+
+  #backToTop {
+    display: none !important;
   }
 
   .erp-image {
