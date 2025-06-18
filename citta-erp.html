@@ -67,7 +67,7 @@
     </div>
   </section>
 
-  <section id="Benefits" class="benefits-section"  data-aos="fade-up">
+  <section id="Benefits" class="benefits-section" data-aos="fade-up">
     <div class="container">
       <div class="benefits-header">
         <h2 class="section-heading">How Your Business Could Benefit</h2>
@@ -118,78 +118,60 @@
         <div class="industry-cards" id="industryCards">
 
           <div class="industry-card">
-            <h3>Service Industry</h3>
-            <hr />
-            <h4>Simplify Scheduling, Billing, and Delivery.</h4>
-            <p>
-              CittaERP empowers service-based businesses to manage clients, projects, and resources with ease.
-              From appointment tracking to automated invoicing, deliver exceptional service with smart, streamlined
-              operations.
-            </p>
-            <a href="#" class="learn-more">
-              <img src="./images/learn-more-Icon.svg" alt="Arrow icon" class="arrow-icon" />
-              Learn more
-            </a>
-          </div>
-<div class="industry-card">
-            <h3>Service Industry</h3>
-            <hr />
-            <h4>Simplify Scheduling, Billing, and Delivery.</h4>
-            <p>
-              CittaERP empowers service-based businesses to manage clients, projects, and resources with ease.
-              From appointment tracking to automated invoicing, deliver exceptional service with smart, streamlined
-              operations.
-            </p>
-            <a href="#" class="learn-more">
-              <img src="./images/learn-more-Icon.svg" alt="Arrow icon" class="arrow-icon" />
-              Learn more
-            </a>
+            <div class="industry-img-wrapper">
+              <img src="./images/School-industry.jpg" alt="Service Industry" />
+            </div>
+            <div class="industry-label">Real Estate Industry</div>
           </div>
 
           <div class="industry-card">
-            <h3>Service Industry</h3>
-            <hr />
-            <h4>Simplify Scheduling, Billing, and Delivery.</h4>
-            <p>
-              CittaERP empowers service-based businesses to manage clients, projects, and resources with ease.
-              From appointment tracking to automated invoicing, deliver exceptional service with smart, streamlined
-              operations.
-            </p>
-            <a href="#" class="learn-more">
-              <img src="./images/learn-more-Icon.svg" alt="Arrow icon" class="arrow-icon" />
-              Learn more
-            </a>
+            <div class="industry-img-wrapper">
+              <img src="./images/School-industry.jpg" alt="Service Industry" />
+            </div>
+            <div class="industry-label">Advertising Industry</div>
           </div>
 
           <div class="industry-card">
-            <h3>Service Industry</h3>
-            <hr />
-            <h4>Simplify Scheduling, Billing, and Delivery.</h4>
-            <p>
-              CittaERP empowers service-based businesses to manage clients, projects, and resources with ease.
-              From appointment tracking to automated invoicing, deliver exceptional service with smart, streamlined
-              operations.
-            </p>
-            <a href="#" class="learn-more">
-              <img src="./images/learn-more-Icon.svg" alt="Arrow icon" class="arrow-icon" />
-              Learn more
-            </a>
+            <div class="industry-img-wrapper">
+              <img src="./images/School-industry.jpg" alt="Service Industry" />
+            </div>
+            <div class="industry-label">Sales & Distribution</div>
           </div>
 
           <div class="industry-card">
-            <h3>Retail Industry</h3>
-            <hr />
-            <h4>Smarter Inventory, Better Sales.</h4>
-            <p>
-              Whether online or in-store, CittaERP helps retailers control stock levels, manage POS systems, and analyze
-              buying trends in real time.
-              Delight customers and stay ahead of demand — all from one platform.
-            </p>
-            <a href="#" class="learn-more">
-              <img src="./images/learn-more-Icon.svg" alt="Arrow icon" class="arrow-icon" />
-              Learn more
-            </a>
+            <div class="industry-img-wrapper">
+              <img src="./images/School-industry.jpg" alt="Service Industry" />
+            </div>
+            <div class="industry-label">Hospitality Industry</div>
           </div>
+
+          <div class="industry-card">
+            <div class="industry-img-wrapper">
+              <img src="./images/School-industry.jpg" alt="Service Industry" />
+            </div>
+            <div class="industry-label">Cooperatives</div>
+          </div>
+
+          <div class="industry-card">
+            <div class="industry-img-wrapper">
+              <img src="./images/School-industry.jpg" alt="Service Industry" />
+            </div>
+            <div class="industry-label">Agriculture Industry</div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-img-wrapper">
+              <img src="./images/School-industry.jpg" alt="Service Industry" />
+            </div>
+            <div class="industry-label">Education Industry</div>
+          </div>
+
+          <div class="industry-card">
+            <div class="industry-img-wrapper">
+              <img src="./images/School-industry.jpg" alt="Service Industry" />
+            </div>
+            <div class="industry-label">Other Industries</div>
+          </div>
+
         </div>
         <div class="scroll-indicator">
           <div class="scroll-bar" id="scrollBar"></div>
@@ -286,30 +268,31 @@
     </div>
   </footer>
 
- 
-<a href="#home" id="backToTop" aria-label="Back to top">↑</a>
 
-  <script src="carousel.js"></script>
-  <script src="section-scroll.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800,
-    once: false,
-    easing:'ease-in-out-cubic',
-    offset: 150
-  });
+  <a href="#home" id="backToTop" aria-label="Back to top">↑</a>
 
-  const backToTop = document.getElementById("backToTop");
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 400) {
-    backToTop.style.display = "flex";
-  } else {
-    backToTop.style.display = "none";
-  }
-});
+  <script src="./js/carousel.js"></script>
+  <script src="./js/auto-swipe.js"></script>
+  <script src="./js/section-scroll.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: false,
+      easing: 'ease-in-out-cubic',
+      offset: 150
+    });
 
-</script>
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        backToTop.style.display = "flex";
+      } else {
+        backToTop.style.display = "none";
+      }
+    });
+
+  </script>
 
 
 </body>

@@ -345,16 +345,45 @@ main[id] {
   -webkit-user-drag: none;
 }
 
-
 .industry-card {
-  flex: 0 0 100%;
-  max-width: 100%;
-  scroll-snap-align: start;
   background-color: #F4F4F4;
-  padding: 30px;
-  border-radius: 20px;
   border: 1px solid #B0B0B0;
-  box-shadow: 0 6px 0 #030B1D;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 0 #030B1D;
+  text-align: center;
+  max-width: 350px;
+  margin: 0 auto;
+  transition: all 0.2s ease;
+}
+
+.industry-img-wrapper {
+  background-color: transparent;  
+  padding: 0;                      
+  border: none;                    
+  box-shadow: none;                
+}
+
+.industry-img-wrapper img {
+  display: block;
+  width: 100%;
+  height: 240px; /* Adjust height as needed */
+  object-fit: cover;
+
+   border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: none;                 
+  box-shadow: none;             
+}
+
+
+.industry-label {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #030B1D;
 }
 
 .scroll-indicator {
@@ -377,16 +406,13 @@ main[id] {
   .industry-card {
     flex: 0 0 48%;
     /* show 2 cards side-by-side on desktop */
-    max-width: 48%;
+    max-width: 31%;
   }
 }
 
 .industry-card:hover {
-  border: 1px solid #B4D2FF;
-  /* 🟡 Yellow on hover */
-  box-shadow: 0 4.5px 0 #B4D2FF;
-  transform: translateY(-4px);
-  /* Subtle lift */
+  box-shadow: 0 6px 0 #D0E4FB;
+  transform: translateY(-5px);
 }
 
 .industry-card h3 {
@@ -411,6 +437,39 @@ main[id] {
   border: none;
   border-top: 1px solid #030B1D;
   margin: 12px 0 16px;
+}
+
+@media (max-width: 767px) {
+  .industry-cards {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 7px 16px;
+    /* Hide default scrollbar */
+    scrollbar-width: none; /* Firefox */
+  }
+  .industry-cards::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+
+  .industry-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    scroll-snap-align: start;
+    margin: 0 auto; /* center align slide */
+  }
+
+  /* Optional: hide nav buttons */
+  .nav-controls {
+    display: none;
+  }
+
+  .scroll-indicator {
+    display: block;
+  }
 }
 
 .learn-more {
