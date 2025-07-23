@@ -722,6 +722,9 @@ strong {
   .About-us-section {
     padding: 50px 20px;
   }
+  .About-us-header p, .Values-header p{
+    display: none;
+  }
 
   .About-us-header p,
   .column {
