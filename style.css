@@ -175,10 +175,10 @@ header.navbar {
 
 .About-us-header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 50px;
   margin-bottom: 25px;
 }
 
@@ -202,10 +202,10 @@ header.navbar {
 
 .Values-header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 50px;
   margin-bottom: 25px;
 }
 
@@ -238,6 +238,13 @@ header.navbar {
   border: 1px solid #030B1D;
   box-shadow: 0 4.5px 0 #030B1D;
 
+}
+
+@media (max-width: 992px) {
+  .industry-card {
+    flex: 1 1 calc(50% - 40px);   /* two-up, keep the 40-px gap */
+    min-width: 260px;             /* a little smaller but still roomy */
+  }
 }
 
 .industry-card:hover {
@@ -301,8 +308,7 @@ header.navbar {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
+grid-template-columns: repeat(3, 1fr);   gap: 40px;
   text-align: left;
 }
 
@@ -335,6 +341,20 @@ header.navbar {
   font-size: 16px;
   color: #444;
   line-height: 1.6;
+}
+
+/* Medium screens – 2 per row */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small screens – stack vertically */
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 strong {
