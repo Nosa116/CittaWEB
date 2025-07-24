@@ -36,6 +36,7 @@ header.navbar {
   padding: 30px 60px;
 }
 
+
 .logo {
   font-size: 40px;
   font-weight: inherit;
@@ -51,9 +52,13 @@ header.navbar {
   font-family: 'Brush Script MT', cursive;
 }
 
+/* hide hamburger on screens wider than 768 px */
+.hamburger {
+  display: none;
+}
+
 .nav-links {
-  display: flex;
-  align-items: center;
+  display: none;
 }
 
 .nav-links a {
@@ -92,6 +97,99 @@ header.navbar {
 
 .nav-links .active::after {
   width: 100%;
+}
+
+@media (max-width:768px) {
+header.navbar {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 20px;
+  }
+
+  /* -------------------------------------------------
+   Hamburger icon
+   ------------------------------------------------*/
+  .hamburger {
+    /* OUTSIDE any media query (desktop hidden) */
+    display: flex;
+    background: none;
+    border: 0;
+    padding: 0;
+    /* remove default button padding */
+    cursor: pointer;
+    z-index: 10001;
+
+    /* give it a fixed frame so the bars can lay out */
+    width: 28px;
+    height: 22px;
+
+    /* centres the stack nicely */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* the three bars */
+  .hamburger .bar {
+    width: 100%;
+    /* exactly 28 px now */
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    /* little polish */
+    transition: transform .3s ease, opacity .3s ease;
+  }
+
+  /* icon morphs into an X */
+  .hamburger.open .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  /* hide the nav until the hamburger is clicked */
+  .nav-links {
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #030B1D;
+    /* match your header */
+    z-index: 1000;
+  }
+
+  /* show it when .open is toggled */
+  .nav-links.open {
+    display: flex;
+  }
+
+
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    position: static;
+    /* or whatever you need */
+    background: none;
+    width: auto;
+    flex-direction: row;
+  }
 }
 
 .impact-section {
@@ -232,25 +330,27 @@ header.navbar {
 .industry-card {
   flex: 1;
   min-width: 300px;
-  background-color: #F4F4F4;
+  background-color: #F8FAFD;
   padding: 30px;
   border-radius: 20px;
-  border: 1px solid #030B1D;
+  border: 1px solid #00297b;
   box-shadow: 0 4.5px 0 #030B1D;
 
 }
 
 @media (max-width: 992px) {
   .industry-card {
-    flex: 1 1 calc(50% - 40px);   /* two-up, keep the 40-px gap */
-    min-width: 260px;             /* a little smaller but still roomy */
+    flex: 1 1 calc(50% - 40px);
+    /* two-up, keep the 40-px gap */
+    min-width: 260px;
+    /* a little smaller but still roomy */
   }
 }
 
 .industry-card:hover {
-  border: 1px solid #B4D2FF;
+  border: 1px solid #00297b;
   /* 🟡 Yellow on hover */
-  box-shadow: 0 4.5px 0 #B4D2FF;
+  box-shadow: 0 4.5px 0 #00297b;
   transform: translateY(-4px);
   /* Subtle lift */
 }
@@ -259,6 +359,7 @@ header.navbar {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
+  margin-top: 5px;
 }
 
 .industry-card h4 {
@@ -293,6 +394,56 @@ header.navbar {
 }
 
 
+/* Card hover effect -------------------------------------*/
+.service-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease,
+    background 0.3s ease;
+  /* added bg transition */
+}
+
+/* Fade the text colour, too */
+.service-title,
+.service-number,
+.service-description {
+  transition: color .5s ease;
+  /* <— new line */
+}
+
+
+.service-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: var(--accent);
+  /* new accent background */
+}
+
+.service-item:hover .service-title,
+.service-item:hover .service-number,
+.service-item:hover .service-description {
+  color: #fff;
+  /* text flips to white */
+}
+
+/* Assign an accent colour to each card ------------------*/
+.services-grid .service-item:nth-child(3n + 1) {
+  --accent: #030B1D;
+}
+
+.services-grid .service-item:nth-child(3n + 2) {
+  --accent: #00297b;
+}
+
+.services-grid .service-item:nth-child(3n) {
+  --accent: #FFBA08;
+}
+
+/* Normal (non-hover) title colour -----------------------*/
+.service-title {
+  color: var(--accent, currentColor);
+}
+
 
 .services-section {
   background-color: #F8FAFD;
@@ -308,20 +459,16 @@ header.navbar {
 
 .services-grid {
   display: grid;
-grid-template-columns: repeat(3, 1fr);   gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
   text-align: left;
 }
 
 .service-item {
-  background-color: #F8FAFD;
+  background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   transition: box-shadow 0.3s ease;
-}
-
-.service-item:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  background-color: white;
 }
 
 .service-number {
@@ -331,10 +478,10 @@ grid-template-columns: repeat(3, 1fr);   gap: 40px;
 }
 
 .service-title {
-  font-size: 24px;
+  font-size: 25px;
   line-height: 1.3;
   margin: 0 0 20px;
-  font-weight: 500;
+  font-weight: 550;
 }
 
 .service-description {
@@ -342,6 +489,9 @@ grid-template-columns: repeat(3, 1fr);   gap: 40px;
   color: #444;
   line-height: 1.6;
 }
+
+
+
 
 /* Medium screens – 2 per row */
 @media (max-width: 992px) {
@@ -615,6 +765,7 @@ strong {
 }
 
 @media (max-width: 768px) {
+
   .section,
   .hero-content,
   .impact-section,
@@ -628,8 +779,8 @@ strong {
   }
 
   .nav-links a:first-child {
-  margin-left: 0;
-}
+    margin-left: 0;
+  }
 }
 
 
@@ -658,12 +809,7 @@ strong {
 }
 
 @media (max-width: 768px) {
-  header.navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 20px 20px;
-  }
+  
 
   .hero-content h1 {
     font-size: 38px;
@@ -722,7 +868,9 @@ strong {
   .About-us-section {
     padding: 50px 20px;
   }
-  .About-us-header p, .Values-header p{
+
+  .About-us-header p,
+  .Values-header p {
     display: none;
   }
 
@@ -734,6 +882,7 @@ strong {
   .section-heading {
     font-size: 24px;
   }
+
   .section-heading p {
     display: none;
   }
