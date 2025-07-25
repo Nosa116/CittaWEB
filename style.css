@@ -523,6 +523,20 @@ header.navbar {
   line-height: 1.6;
 }
 
+@media (max-width: 768px) {
+  /* When a .service-item gets the .in-view class… */
+  .services-grid .service-item.in-view {
+    background: var(--accent);                 /* use the same accent var */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* same as hover */
+  }
+
+  /* …and flip the text to white */
+  .services-grid .service-item.in-view .service-title,
+  .services-grid .service-item.in-view .service-number,
+  .services-grid .service-item.in-view .service-description {
+    color: #fff;
+  }
+}
 
 
 
