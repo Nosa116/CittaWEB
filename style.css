@@ -29,7 +29,7 @@ body {
 
 header.navbar {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -155,27 +155,59 @@ header.navbar {
     transform: translateY(-9px) rotate(-45deg);
   }
 
-  /* hide the nav until the hamburger is clicked */
   .nav-links {
-
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    flex-direction: column;
-    background-color: #030B1D;
-    /* match your header */
-    z-index: 1000;
+    background-color: #030B1D;      /* keep your dark bg */
+    display: none;                   /* hidden by default */
+    flex-direction: column;          /* stack items vertically */
+    align-items: center;             /* center links */
+    padding: 2rem 0;                 /* generous top/bottom padding */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    overflow: hidden;
   }
 
-  /* show it when .open is toggled */
+  /* when JS toggles .open */
   .nav-links.open {
     display: flex;
+    animation: fadeInDown 0.4s ease-out forwards;
   }
 
+  /* kill any list‐item borders/underlines */
+  .nav-links li {
+    margin: 0.5rem 0;                /* spacing between items */
+    list-style: none;
+    border: none;
+  }
+
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;           /* NO underlines */
+    font-size: 1.25rem;
+    font-weight: 500;
+    transition: color 0.25s ease;
+  }
+
+  .nav-links a:hover {
+    color: #f39c12;                  /* your accent color on hover */
+  }
 
 }
-
+/* ------------------------------------------------------------
+   ANIMATION KEYFRAMES
+   ------------------------------------------------------------ */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @media (min-width: 769px) {
   .hamburger {
     display: none;
