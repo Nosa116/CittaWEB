@@ -187,6 +187,7 @@ header.navbar {
     text-decoration: none;           /* NO underlines */
     font-size: 1.25rem;
     font-weight: 500;
+    margin-left: 0px;               /* reset left margin */
     transition: color 0.25s ease;
   }
 
