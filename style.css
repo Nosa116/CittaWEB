@@ -811,6 +811,19 @@ strong {
   text-decoration: underline;
 }
 
+/* 1) Remove default link color & underline */
+.phone-link {
+  color: inherit;          /* inherit text color from parent (or set your own) */
+  text-decoration: none;   /* remove underline */
+}
+
+/* 2) (Optional) Add a custom hover effect */
+.phone-link:hover,
+.phone-link:focus {
+  color: #FFBA08;          /* pick any hover color you like */
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
 
   .section,
