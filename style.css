@@ -934,3 +934,35 @@ strong {
     display: none;
   }
 }
+
+/* ===== Mobile fixes for footer newsletter ===== */
+@media (max-width: 480px) {
+  /* 1) Cap width & center the white box */
+  .footer-newsletter {
+    width: 100%;
+    max-width: 450px;
+    margin: 20px auto 0; /* top spacing + auto left/right to center */
+    padding: 16px;       /* ensure consistent internal padding */
+  }
+
+  /* 2) Keep the form inline but tighten spacing */
+  .newsletter-form {
+    display: flex;
+    gap: 8px;
+  }
+
+  .newsletter-form input[type="email"] {
+    
+    padding: 5px 5px; /* adjust padding for smaller screens */
+    
+  }
+
+  /* 3) Match input & button heights for perfect alignment */
+  .newsletter-form input[type="email"],
+  .newsletter-form button {
+    height: 48px;
+    box-sizing: border-box;
+  }
+
+ 
+}
