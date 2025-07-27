@@ -5,10 +5,9 @@
   box-sizing: border-box;
 }
 
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 50px;
+
+html, body {
+  overflow-x: hidden;
 }
 
 html {
@@ -89,12 +88,26 @@ body {
 
 
 .nav-links .demo-btn {
-  background-color: #FFBA08;
+  background-color: #030B1D;
   color: #ffffff;
   border-radius: 10px;
   padding: 14px 24px;
   font-weight: bold;
 }
+
+/* 1. Kill the underline on demo-btn entirely */
+.nav-links .demo-btn::after {
+  display: none;
+}
+
+/* 2. Disable the generic hover‐color on demo-btn */
+.nav-links .demo-btn:hover {
+  /* your custom hover background / text color here */
+  background-color: #FFBA08;
+  color: #030B1D;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 
 /* NAVBAR */
 .navbar {
@@ -102,7 +115,7 @@ body {
   top: 0;
   z-index: 999;
   background-color: white;
-  padding: 20px 0;
+  padding: 20px 60px;
 }
 
 .navbar.scrolled {
@@ -124,9 +137,8 @@ main[id] {
 
 /* HERO */
 .hero {
-  padding: 60px 0;
-  /* remove horizontal padding */
-  min-height: calc(100vh - 80px);
+  padding: 50px 60px;
+
 }
 
 .hero-content {
@@ -139,7 +151,7 @@ main[id] {
 
 .content {
   flex: 1;
-  padding-right: 40px;
+ 
 }
 
 .content h1 {
@@ -190,12 +202,12 @@ main[id] {
 /* ERP SECTION */
 .erp-section {
   background-color: #F9FBFC;
-  padding: 80px 0;
+  padding: 50px 60px;
   /* remove horizontal padding */
 }
 
 .erp-content {
-  display: block;
+  display: flex;
   align-items: center;
   gap: 50px;
 }
@@ -221,6 +233,65 @@ main[id] {
 
 /* end */
 
+/* ─── Features Section (tweaked) ────────────────────────────────────────────────── */
+.features-section {
+  padding: 50px 60px;
+  background-color: #fff;
+}
+.features-section .section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #030B1D;
+}
+
+/* → increase minimum card width to 300px (was 250px) */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;           /* a bit more breathing room */
+  border: 1px solid #030B1D;
+  box-shadow: 0 4.5px 0 #030B1D;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;      /* center contents for icon + title */
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  font-size: 2.5rem;       /* nice & big */
+  color: #FFBA08;          /* match your accent */
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 1rem;
+  color: #030B1D;
+}
+
+.feature-card ul {
+  text-align: left;
+  list-style: disc inside;
+  color: #030B1D;
+}
+
+.feature-card ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+/* ───────────────────────────────────────────────────────────────────────────── */
+
+
 
 /* Hamburger style (hidden on large screens) */
 .hamburger {
@@ -239,7 +310,7 @@ main[id] {
 }
 
 .benefits-section {
-  padding: 100px 0;
+  padding: 50px 60px;
   border-bottom: 1px solid #030B1D;
   background-color: #fff;
 }
@@ -302,8 +373,8 @@ main[id] {
 }
 
 .industry-section {
-  padding: 100px 0;
-  background-color: #fff;
+  padding: 50px 60px;
+  background-color: #F8FAFD;
 }
 
 .industry-header {
@@ -346,7 +417,7 @@ main[id] {
 }
 
 .industry-card {
-  background-color: #F4F4F4;
+  background-color: #fff;
   border: 1px solid #B0B0B0;
   border-radius: 20px;
   overflow: hidden;
@@ -411,7 +482,7 @@ main[id] {
 }
 
 .industry-card:hover {
-  box-shadow: 0 6px 0 #D0E4FB;
+  box-shadow: 0 6px 0 #00297b;
   transform: translateY(-5px);
 }
 
@@ -440,6 +511,7 @@ main[id] {
 }
 
 @media (max-width: 767px) {
+
   .industry-cards {
     display: flex;
     flex-direction: row;
@@ -520,7 +592,7 @@ main[id] {
 /* CTA Section */
 .cta-section {
   background-color: #FFBA08;
-  padding: 80px 0;
+  padding: 50px 60px;
 }
 
 .cta-content {
@@ -573,11 +645,82 @@ main[id] {
 
 }
 
+
+
+
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #FFBA08;
+  color: #030B1D;
+  font-size: 24px;
+  padding: 6px 20px;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  text-decoration: none;
+}
+#backToTop:hover {
+  background-color: #0196D2;
+  color: white;
+}
+
+/* Mobile Optimization CSS Additions */
+
+/* Mobile menu toggle: show hamburger and hide nav-links */
+@media (max-width: 600px) {
+  
+    .navbar-inner {
+    position: relative;
+  }
+  .hamburger {
+    display: inline-flex !important;
+    position: absolute !important;
+    top: 12px !important;
+    right: 16px !important;
+    flex-direction: column;
+    gap: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  .hamburger .bar {
+    width: 24px;
+    height: 3px;
+    background-color: #030B1D;
+    border-radius: 2px;
+  }
+  .nav-links {
+    display: none !important;
+  }
+
+  /* When active (e.g. .open class on navbar), show links vertically */
+  .navbar.open .nav-links {
+    display: flex !important;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+}
+
+
 /* Footer Section */
 .footer {
   background-color: #030B1D;
   color: white;
-  padding: 60px 0;
+  padding: 60px 60px;
   font-size: 14px;
 }
 
@@ -689,7 +832,7 @@ main[id] {
 
 .newsletter-form input[type="email"] {
   flex: 1;
-  padding: 0px 16px;
+  padding: 5px 16px;
   border: 1px solid #ccc;
   border-radius: 10px;
   font-size: 14px;
@@ -707,7 +850,7 @@ main[id] {
   border-radius: 10px;
   font-size: 14px;
   cursor: pointer;
-  height: 48px;
+  height: 59.6px;
   /* ✅ match input height */
 }
 
@@ -728,142 +871,116 @@ main[id] {
   text-decoration: underline;
 }
 
-#backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #FFBA08;
-  color: #030B1D;
-  font-size: 24px;
-  padding: 6px 20px;
-  border-radius: 50%;
-  display: none;
+/* 1) Remove default link color & underline */
+.phone-link {
+  color: inherit;          /* inherit text color from parent (or set your own) */
+  text-decoration: none;   /* remove underline */
+}
+
+/* 2) (Optional) Add a custom hover effect */
+.phone-link:hover,
+.phone-link:focus {
+  color: #FFBA08;          /* pick any hover color you like */
+  text-decoration: underline;
+}
+
+
+
+/* Global adjustments for small screens (max-width: 600px) */
+@media (max-width: 600px) {
+  /* Reduce overall padding */
+  body, .hero, .erp-section, .benefits-section, .industry-section, .cta-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Navbar adjustments */
+  .navbar { padding: 10px 16px; }
+  .logo { font-size: 32px; }
+
+  /* Hero section stacking */
+  .hero-content {
+    flex-direction: column;
+    padding: 24px 0;
+  }
+  .content h1 { font-size: 28px; line-height: 1.3; }
+  .content .desc, .content .highlight { font-size: 16px; }
+  .cta-btn-1 { padding: 12px 20px; font-size: 16px; }
+  .hero-img img { max-width: 100%; height: auto; }
+
+  /* ERP section stacking */
+  .erp-content { flex-direction: column; gap: 16px; }
+  .erp-text h2 { font-size: 32px; }
+  .erp-text p { font-size: 16px; }
+
+  /* Benefits cards: single column layout */
+  .benefit-grid { grid-template-columns: 1fr; gap: 24px; }
+  .benefit-card { padding: 16px; }
+  .benefit-card h3 { font-size: 20px; }
+  .benefit-card p { font-size: 14px; }
+
+  /* Industry carousel: ensure full-width slides */
+  .industry-cards { gap: 16px; padding: 8px 0; }
+  .industry-card { max-width: 100%; }
+  .industry-img-wrapper img { height: 180px; }
+  .industry-label { font-size: 16px; padding: 8px; }
+
+  /* CTA section: stack vertically */
+  .cta-content { flex-direction: column; align-items: stretch; text-align: center; gap: 32px; }
+  .cta-text h2 span { font-size: 20px; }
+  .cta-text p { font-size: 14px; }
+  .cta-btn { padding: 10px 16px; font-size: 16px; }
+  .cta-image img { max-width: 80%; }
+
+  /* Sections headings */
+  .section-heading { font-size: 24px; }
+
+  /* Back to top button hidden on mobile */
+  #backToTop { display: none; }
+}
+
+/* Optional: Increase touch target sizes */
+button, .cta-btn, .cta-btn-1, .nav-links a {
+  min-height: 44px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  text-decoration: none;
-}
-#backToTop:hover {
-  background-color: #0196D2;
-  color: white;
 }
 
-
-/* Responsive styles */
-@media (max-width: 768px) {
-
-  .navbar {
-    overflow: visible;
-    /* Ensure dropdown is visible */
-  }
-
-  .navbar-inner {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-  }
-
-  .navbar-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  .hamburger {
-    display: block;
-    font-size: 28px;
-    cursor: pointer;
-    color: #030B1D;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: white;
-    margin-top: 0;
-    padding: 10px 0;
-    border-top: 1px solid #eee;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    /* Higher than navbar */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links a {
-    margin: 0;
-    padding: 14px 20px;
-    width: 100%;
-    border: none;
-    border-top: 1px solid #eee;
-    border-radius: 0;
-    font-size: 16px;
-    color: #030B1D;
-    text-align: left;
-    background: none;
-    position: relative;
-  }
-
-  .nav-links a:hover::after,
-  .nav-links .active::after {
-    display: none;
-  }
-
-  .nav-links a:hover {
-    background-color: #f9f9f9;
-    color: #FFBA08;
-  }
-
-  .nav-links .active {
-    background-color: #FFF3D4;
-    font-weight: bold;
-    color: #FFBA08;
-  }
-
-  .nav-links .demo-btn {
-    background-color: transparent;
-    color: #FFBA08;
-    border: 2px solid #FFBA08;
-    padding: 12px 20px;
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
-    border-radius: 8px;
-    font-weight: 600;
-  }
-
-  .nav-links .demo-btn:hover {
-    background-color: #FFBA08;
-    color: #030B1D;
-  }
-
-  #backToTop {
+/*────────────────────────────────────────
+  Disable hover effects on the mobile nav
+────────────────────────────────────────*/
+@media (max-width: 600px) {
+  /* 1) Kill the pseudo‐underline entirely */
+  .navbar.open .nav-links a::after {
     display: none !important;
   }
 
-  .erp-image {
-    display: none;
-  }
-
-  .cta-image {
-    display: none;
-  }
-
-  .cta-text {
-    text-align: center;
-  }
-
-  .cta-text h2 span {
-    display: inline-block;
+  /* 2) Neutralize any color or background change on hover */
+  .navbar.open .nav-links a:hover {
+    color: inherit !important;           /* stay the same as normal */
+    background: none     !important;     /* remove any bg highlight */
   }
 }
+
+/* Footer tweaks for small screens */
+@media (max-width: 600px) {
+  /* 1) Reduce footer’s side padding to match the rest */
+  .footer {
+    padding: 40px 16px;
+  }
+
+  /* 2) Make the newsletter form full-width and flush */
+  .footer-newsletter {
+    width: 100%;
+    max-width: none;
+    padding: 12px 16px;
+  }
+
+  /* 3) Match button height to the input for perfect vertical alignment */
+  .newsletter-form button {
+    height: 48px;
+  }
+}
+
+
