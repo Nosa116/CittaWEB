@@ -854,6 +854,48 @@ main[id] {
   /* ✅ match input height */
 }
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: #fff;
+  max-width: 800px;
+  width: 90%;
+  padding: 30px;
+  border-radius: 12px;
+  position: relative;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.modal-content h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+}
 
 /* --- BOTTOM BAR --- */
 .footer-bottom {
@@ -889,9 +931,9 @@ main[id] {
 /* Global adjustments for small screens (max-width: 600px) */
 @media (max-width: 600px) {
   /* Reduce overall padding */
-  body, .hero, .erp-section, .benefits-section, .industry-section, .cta-section {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+   .hero, .erp-section, .benefits-section, .features-section, .industry-section, .cta-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   /* Navbar adjustments */

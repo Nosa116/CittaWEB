@@ -8,13 +8,9 @@
 
   <!-- Font Awesome 5 Free -->
   <!-- Corrected Font Awesome 5.15.4 CSS with matching SRI -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-  integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 
@@ -43,7 +39,7 @@
         <a href="#home" class="active">Home</a>
         <a href="#Benefits">Benefits</a>
         <a href="#Industry">Industry</a>
-        <a href="#" class="demo-btn">Request Demo</a>
+        <a href="javascript:void(0);" onclick="openModal()" class="demo-btn">Request Demo</a>
       </nav>
     </div>
   </header>
@@ -53,12 +49,14 @@
   <main id="home" class="hero">
     <div class=" hero-content">
       <section class="content">
-        <h1>Streamline Business.<br>Elevate Performance.</h1>
-        <p class="desc">Our all-in-one, intelligent platform centralizes your core operations — finance, HR, inventory,
-          sales, procurement, and more — into a single digital hub. No more scattered systems. No more missed insights.
+        <h1>Elevate Operational<br>Performance</h1>
+        <p class="desc">Cittanuvola’s intelligent all-in-one platform brings your core business functions into one
+          centralized digital workspace.
+          Manage finance, HR, sales, inventory, procurement, and more from a single source of truth. Say goodbye to
+          scattered systems and missed insights.
         </p>
-        <p class="highlight">Empower your team. Streamline your workflow. And scale with confidence.</p>
-        <a href="#" class="cta-btn-1">Request Demo</a>
+        <p class="highlight">Give your team the tools to work smarter, move faster, and grow stronger.</p>
+        <a href="javascript:void(0);" onclick="openModal()" class="cta-btn-1">Request Demo</a>
       </section>
       <section class="hero-img">
         <img src="./images/buisness-buildings2.jpg" alt="Analytics" />
@@ -71,10 +69,12 @@
     <div class=" erp-content">
       <div class="erp-text">
         <h2>What is an ERP Software?</h2>
-        <p>ERP stands for Enterprise Resource Planning — a type of software that unifies all core functions of a
-          business into one streamlined system. Instead of juggling separate tools for accounting, inventory, HR, and
-          sales, an ERP connects everything in real time. This helps teams collaborate better, reduces duplication, and
-          gives decision-makers a clear overview of operations. .</p>
+        <p>ERP stands for Enterprise Resource Planning. It is a type of software that integrates all core functions of a
+          business into one streamlined system.
+
+          Rather than juggling separate tools for accounting, inventory, HR, and sales, ERP software connects everything
+          in real time. It improves team collaboration, eliminates data duplication, and gives business leaders a clear,
+          unified view of operations.</p>
       </div>
 
     </div>
@@ -310,17 +310,29 @@
       <div class="cta-text">
         <h2><span>Unlock Your Business Potential</span></h2>
         <p>
-          Don’t let outdated systems hold you back. With CittàNuvola ERP, you gain the tools to streamline operations,
-          enhance decision-making, and fuel growth. Talk to our experts today — and start building a more efficient,
-          future-ready business.
+          Outdated systems can slow you down. With CittaERP, you get the tools to streamline your operations,
+          make smarter decisions, and drive sustainable growth. Speak with our experts today and start building a more
+          efficient, future-ready business.
         </p>
-        <a href="#" class="cta-btn">Request Demo</a>
+        <a href="javascript:void(0);" onclick="openModal()" class="cta-btn">Request Demo</a>
       </div>
       <div class="cta-image">
         <img src="./images/unlock-potential-illustration.svg" alt="Illustration" />
       </div>
     </div>
   </section>
+
+  <!-- DEMO MODAL -->
+  <div id="demoModal" class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2>Request a Demo</h2>
+      <p>Fill out the form and our team will reach out shortly.</p>
+      <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true" width="100%" height="600"
+        frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+  </div>
+
 
   <!-- FOOTER SECTION -->
   <footer class="footer">
@@ -389,6 +401,22 @@
   <script src="./js/auto-swipe.js"></script>
   <script src="./js/section-scroll.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    function openModal() {
+      document.getElementById('demoModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('demoModal').style.display = 'none';
+    }
+
+    // Optional: close when clicking outside the form
+    window.addEventListener('click', function (e) {
+      const modal = document.getElementById('demoModal');
+      if (e.target === modal) closeModal();
+    });
+  </script>
+
   <script>
     AOS.init({
       duration: 800,
