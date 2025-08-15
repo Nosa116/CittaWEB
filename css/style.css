@@ -44,12 +44,12 @@ header.navbar {
 
 .logo .blue {
   color: #0196D2;
-  font-family: 'Brush Script MT', cursive;
+  font-family: 'Mistral', cursive;
 }
 
 .logo .yellow {
   color: #FFBA08;
-  font-family: 'Brush Script MT', cursive;
+  font-family: 'Mistral', cursive;
 }
 
 /* hide hamburger on screens wider than 768 px */
