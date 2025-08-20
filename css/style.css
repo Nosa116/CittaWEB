@@ -753,12 +753,14 @@ strong {
 .footer-newsletter {
   background-color: white;
   border-radius: 12px;
-  padding: 12px 20px;
+  padding: 52px 20px;
   /* smaller top/bottom for tighter vertical centering */
   max-width: 550px;
   flex: 1;
+  flex-direction: column;   /* stack children vertically */
+  align-items: flex-start; 
   display: flex;
-  align-items: center;
+  
   /* ✅ vertical centering of inner form */
 }
 
@@ -979,3 +981,120 @@ strong {
 
  
 }
+
+/* ===== Scroll-to-Top with Progress ===== */
+html {
+  scroll-behavior: smooth; /* graceful smooth scroll */
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+.scroll-top {
+  --size: 54px;
+  --ring: #FFBA08;          /* progress color */
+  --track: #e9eef7;         /* track color */
+  --icon: #030B1D;          /* chevron color */
+  --bg: #ffffff;            /* inner disc */
+  --shadow: 0 8px 24px rgba(0,0,0,.18);
+
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  width: var(--size);
+  height: var(--size);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--icon);
+  background:
+    conic-gradient(var(--ring) var(--p, 0%), var(--track) 0) /* progress ring */;
+  box-shadow: var(--shadow);
+  display: grid;
+  place-items: center;
+
+  /* start hidden */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px) scale(.96);
+  transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+  z-index: 1000;
+}
+
+/* inner disc */
+.scroll-top::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  background: var(--bg);
+}
+
+/* chevron sits above inner disc */
+.scroll-top__icon {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* shown state */
+.scroll-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+/* focus/hover polish */
+.scroll-top:focus-visible,
+.scroll-top:hover {
+  outline: none;
+  filter: brightness(1.02);
+  box-shadow: 0 10px 28px rgba(0,0,0,.22);
+}
+
+/* High-contrast optional tweak */
+@media (prefers-contrast: more) {
+  .scroll-top {
+    --track: #d7ddea;
+    --shadow: 0 0 0 2px rgba(255,255,255,.6), 0 8px 24px rgba(0,0,0,.2);
+  }
+}
+
+/* Newsletter status messages (slim + subtle) */
+#newsletterStatus {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: left;
+}
+
+/* Variants — smaller, with left border accent */
+#newsletterStatus.success {
+  display: block;
+  color: #137333;             /* green text */
+  border-left: 3px solid #137333;
+  padding-left: 6px;
+  opacity: 1;
+}
+
+#newsletterStatus.error {
+  display: block;
+  color: #b00020;             /* red text */
+  border-left: 3px solid #b00020;
+  padding-left: 6px;
+  opacity: 1;
+}
+
+#newsletterStatus.info {
+  display: block;
+  color: #174ea6;             /* blue text */
+  border-left: 3px solid #174ea6;
+  padding-left: 6px;
+  opacity: 1;
+}
+
