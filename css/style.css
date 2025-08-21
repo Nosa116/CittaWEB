@@ -16,10 +16,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 120px; /* Adjust this for spacing */
+  padding-top: 120px;
+  /* Adjust this for spacing */
   color: white;
   overflow: hidden;
-    padding-top: 0;
+  padding-top: 0;
 }
 
 
@@ -103,7 +104,7 @@ header.navbar {
 }
 
 @media (max-width:768px) {
-header.navbar {
+  header.navbar {
     flex-direction: row;
     align-items: center;
     gap: 20px;
@@ -163,12 +164,17 @@ header.navbar {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #030B1D;      /* keep your dark bg */
-    display: none;                   /* hidden by default */
-    flex-direction: column;          /* stack items vertically */
-    align-items: center;             /* center links */
-    padding: 2rem 0;                 /* generous top/bottom padding */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    background-color: #030B1D;
+    /* keep your dark bg */
+    display: none;
+    /* hidden by default */
+    flex-direction: column;
+    /* stack items vertically */
+    align-items: center;
+    /* center links */
+    padding: 2rem 0;
+    /* generous top/bottom padding */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     overflow: hidden;
   }
 
@@ -180,25 +186,30 @@ header.navbar {
 
   /* kill any list‐item borders/underlines */
   .nav-links li {
-    margin: 0.5rem 0;                /* spacing between items */
+    margin: 0.5rem 0;
+    /* spacing between items */
     list-style: none;
     border: none;
   }
 
   .nav-links a {
     color: #fff;
-    text-decoration: none;           /* NO underlines */
+    text-decoration: none;
+    /* NO underlines */
     font-size: 1.25rem;
     font-weight: 500;
-    margin-left: 0px;               /* reset left margin */
+    margin-left: 0px;
+    /* reset left margin */
     transition: color 0.25s ease;
   }
 
   .nav-links a:hover {
-    color: #f39c12;                  /* your accent color on hover */
+    color: #f39c12;
+    /* your accent color on hover */
   }
 
 }
+
 /* ------------------------------------------------------------
    ANIMATION KEYFRAMES
    ------------------------------------------------------------ */
@@ -207,11 +218,13 @@ header.navbar {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 @media (min-width: 769px) {
   .hamburger {
     display: none;
@@ -503,7 +516,7 @@ header.navbar {
 
 .service-item {
   background-color: #fff;
-  padding: 20px;
+  padding: 40px 20px 20px;
   border-radius: 8px;
   transition: box-shadow 0.3s ease;
 }
@@ -528,10 +541,13 @@ header.navbar {
 }
 
 @media (max-width: 768px) {
+
   /* When a .service-item gets the .in-view class… */
   .services-grid .service-item.in-view {
-    background: var(--accent);                 /* use the same accent var */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* same as hover */
+    background: var(--accent);
+    /* use the same accent var */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* same as hover */
   }
 
   /* …and flip the text to white */
@@ -761,10 +777,11 @@ strong {
   /* smaller top/bottom for tighter vertical centering */
   max-width: 550px;
   flex: 1;
-  flex-direction: column;   /* stack children vertically */
-  align-items: flex-start; 
+  flex-direction: column;
+  /* stack children vertically */
+  align-items: flex-start;
   display: flex;
-  
+
   /* ✅ vertical centering of inner form */
 }
 
@@ -819,14 +836,17 @@ strong {
 
 /* 1) Remove default link color & underline */
 .phone-link {
-  color: inherit;          /* inherit text color from parent (or set your own) */
-  text-decoration: none;   /* remove underline */
+  color: inherit;
+  /* inherit text color from parent (or set your own) */
+  text-decoration: none;
+  /* remove underline */
 }
 
 /* 2) (Optional) Add a custom hover effect */
 .phone-link:hover,
 .phone-link:focus {
-  color: #FFBA08;          /* pick any hover color you like */
+  color: #FFBA08;
+  /* pick any hover color you like */
   text-decoration: underline;
 }
 
@@ -875,7 +895,7 @@ strong {
 }
 
 @media (max-width: 768px) {
-  
+
 
   .hero-content h1 {
     font-size: 38px;
@@ -956,12 +976,15 @@ strong {
 
 /* ===== Mobile fixes for footer newsletter ===== */
 @media (max-width: 480px) {
+
   /* 1) Cap width & center the white box */
   .footer-newsletter {
     width: 100%;
     max-width: 450px;
-    margin: 20px auto 0; /* top spacing + auto left/right to center */
-    padding: 16px;       /* ensure consistent internal padding */
+    margin: 20px auto 0;
+    /* top spacing + auto left/right to center */
+    padding: 16px;
+    /* ensure consistent internal padding */
   }
 
   /* 2) Keep the form inline but tighten spacing */
@@ -971,9 +994,10 @@ strong {
   }
 
   .newsletter-form input[type="email"] {
-    
-    padding: 5px 5px; /* adjust padding for smaller screens */
-    
+
+    padding: 5px 5px;
+    /* adjust padding for smaller screens */
+
   }
 
   /* 3) Match input & button heights for perfect alignment */
@@ -983,26 +1007,33 @@ strong {
     box-sizing: border-box;
   }
 
- 
+
 }
 
 /* ===== Scroll-to-Top with Progress ===== */
 html {
-  scroll-behavior: smooth; /* graceful smooth scroll */
+  scroll-behavior: smooth;
+  /* graceful smooth scroll */
 }
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 .scroll-top {
   --size: 54px;
-  --ring: #FFBA08;          /* progress color */
-  --track: #e9eef7;         /* track color */
-  --icon: #030B1D;          /* chevron color */
-  --bg: #ffffff;            /* inner disc */
-  --shadow: 0 8px 24px rgba(0,0,0,.18);
+  --ring: #FFBA08;
+  /* progress color */
+  --track: #e9eef7;
+  /* track color */
+  --icon: #030B1D;
+  /* chevron color */
+  --bg: #ffffff;
+  /* inner disc */
+  --shadow: 0 8px 24px rgba(0, 0, 0, .18);
 
   position: fixed;
   right: max(16px, env(safe-area-inset-right));
@@ -1014,7 +1045,9 @@ html {
   cursor: pointer;
   color: var(--icon);
   background:
-    conic-gradient(var(--ring) var(--p, 0%), var(--track) 0) /* progress ring */;
+    conic-gradient(var(--ring) var(--p, 0%), var(--track) 0)
+    /* progress ring */
+  ;
   box-shadow: var(--shadow);
   display: grid;
   place-items: center;
@@ -1055,14 +1088,14 @@ html {
 .scroll-top:hover {
   outline: none;
   filter: brightness(1.02);
-  box-shadow: 0 10px 28px rgba(0,0,0,.22);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .22);
 }
 
 /* High-contrast optional tweak */
 @media (prefers-contrast: more) {
   .scroll-top {
     --track: #d7ddea;
-    --shadow: 0 0 0 2px rgba(255,255,255,.6), 0 8px 24px rgba(0,0,0,.2);
+    --shadow: 0 0 0 2px rgba(255, 255, 255, .6), 0 8px 24px rgba(0, 0, 0, .2);
   }
 }
 
@@ -1080,7 +1113,8 @@ html {
 /* Variants — smaller, with left border accent */
 #newsletterStatus.success {
   display: block;
-  color: #137333;             /* green text */
+  color: #137333;
+  /* green text */
   border-left: 3px solid #137333;
   padding-left: 6px;
   opacity: 1;
@@ -1088,7 +1122,8 @@ html {
 
 #newsletterStatus.error {
   display: block;
-  color: #b00020;             /* red text */
+  color: #b00020;
+  /* red text */
   border-left: 3px solid #b00020;
   padding-left: 6px;
   opacity: 1;
@@ -1096,9 +1131,9 @@ html {
 
 #newsletterStatus.info {
   display: block;
-  color: #174ea6;             /* blue text */
+  color: #174ea6;
+  /* blue text */
   border-left: 3px solid #174ea6;
   padding-left: 6px;
   opacity: 1;
 }
-
