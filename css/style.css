@@ -15,10 +15,13 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  padding-top: 120px; /* Adjust this for spacing */
   color: white;
   overflow: hidden;
+    padding-top: 0;
 }
+
 
 .overlay {
   position: absolute;
@@ -274,6 +277,7 @@ header.navbar {
   padding: 0 60px;
   max-width: 800px;
   margin-bottom: 200px;
+  margin-top: 110px;
 }
 
 .hero-content h1 {
@@ -286,7 +290,7 @@ header.navbar {
 
 .hero-content p {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 20px;
   color: white;
   line-height: 1.5;
 }
@@ -912,11 +916,11 @@ strong {
 
 @media (max-width: 480px) {
   .hero-content h1 {
-    font-size: 30px;
+    font-size: 34px;
   }
 
   .hero-content p {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .impact-number {
