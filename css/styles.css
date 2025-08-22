@@ -1033,7 +1033,7 @@ button, .cta-btn, .cta-btn-1, .nav-links a {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding-top: 15px;
+    padding-top: 20px;
   }
   /* Override the absolute positioning (note the higher specificity) */
   .navbar .hamburger {
