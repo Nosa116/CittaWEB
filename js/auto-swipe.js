@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         left: index * cardWidth,
         behavior: "smooth",
       });
-    }, 3000);
+    }, 1200);
   };
 
   const stopAutoScroll = () => {

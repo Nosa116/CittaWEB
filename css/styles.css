@@ -18,25 +18,17 @@ body {
   font-family: 'Rethink Sans', sans-serif;
   line-height: 1.6;
   color: #030B1D;
-  background-color: #fff;
+  background-color: #fefefe;
 }
 
 
 
-.logo {
-  font-size: 40px;
-  font-weight: inherit;
+.logo img {
+  height: 40px;   /* good navbar size */
+  width: auto;    /* keeps aspect ratio */
+  display: block; /* removes inline spacing */
 }
 
-.logo .blue {
-  color: #0196D2;
-  font-family: 'Brush Script MT', cursive;
-}
-
-.logo .yellow {
-  color: #FFBA08;
-  font-family: 'Brush Script MT', cursive;
-}
 
 .nav-links a {
   margin-left: 20px;
@@ -114,7 +106,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 999;
-  background-color: white;
+  background-color: #fefefe;
   padding: 20px 60px;
 }
 
@@ -167,6 +159,7 @@ main[id] {
   font-size: 20px;
   margin-bottom: 20px;
   max-width: 600px;
+  text-align: justify;
 }
 
 .content .highlight {
@@ -229,6 +222,8 @@ main[id] {
   color: #030B1D;
   line-height: 1.7;
   max-width: 100%;
+    text-align: justify;
+
 }
 
 /* end */
@@ -312,7 +307,7 @@ main[id] {
 .benefits-section {
   padding: 50px 60px;
   border-bottom: 1px solid #030B1D;
-  background-color: #fff;
+  background-color: #fefefe;
 }
 
 .benefits-header {
@@ -622,6 +617,8 @@ main[id] {
   font-size: 16px;
   color: #030B1D;
   line-height: 1.6;
+  text-align: justify;
+
 }
 
 .cta-btn {
@@ -811,7 +808,7 @@ main[id] {
 }
 
 .footer-newsletter {
-  background-color: white;
+  background-color: #fefefe;
   border-radius: 12px;
   padding: 12px 20px;
   /* smaller top/bottom for tighter vertical centering */
