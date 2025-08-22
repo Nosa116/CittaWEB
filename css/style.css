@@ -318,7 +318,7 @@ header.navbar {
 
 .About-us-section {
   padding: 100px 60px;
-  background-color: #fff;
+  background-color: #fefefe;
 }
 
 .About-us-header {
@@ -345,7 +345,7 @@ header.navbar {
 
 .Values-section {
   padding: 100px 60px;
-  background-color: white;
+  background-color: #fefefe;
 }
 
 .Values-header {
@@ -385,7 +385,54 @@ header.navbar {
   border-radius: 20px;
   border: 1px solid #00297b;
   box-shadow: 0 4.5px 0 #030B1D;
+  transition: 
+    transform 0.4s ease, 
+    box-shadow 0.4s ease, 
+    background 0.6s ease, 
+    color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
 
+/* Gradient background on hover */
+.industry-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #030B1D;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  z-index: 0;
+}
+
+.industry-card:hover::before {
+  opacity: 1;
+}
+
+/* Bring text above gradient */
+.industry-card * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover effect */
+.industry-card:hover {
+  transform: translateY(-8px) scale(1.03) rotate3d(1, 1, 0, 2deg);
+  box-shadow: 0 12px 24px rgba(0, 41, 123, 0.3);
+  color: white;
+  border-color: transparent;
+}
+
+.industry-card:hover h3,
+.industry-card:hover p {
+  color: #fff;
+  transition: color 0.4s ease;
+}
+
+/* Optional glowing border */
+.industry-card:hover {
+  box-shadow: 0 0 15px rgba(0, 41, 123, 0.6),
+              0 0 30px rgba(255, 186, 8, 0.6);
 }
 
 @media (max-width: 992px) {
@@ -397,13 +444,6 @@ header.navbar {
   }
 }
 
-.industry-card:hover {
-  border: 1px solid #00297b;
-  /* 🟡 Yellow on hover */
-  box-shadow: 0 4.5px 0 #00297b;
-  transform: translateY(-4px);
-  /* Subtle lift */
-}
 
 .industry-card h3 {
   font-size: 20px;

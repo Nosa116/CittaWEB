@@ -14,9 +14,9 @@
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -25,7 +25,9 @@
 
     <header class="navbar">
       <div class="logo">
-        <span class="blue">Citta</span><span class="yellow">nuvola</span>
+        <a href="index.html">
+          <img src="./images/Cittanuvola logo.png" alt="Cittanuvola Logo">
+        </a>
       </div>
 
       <button class="hamburger" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
@@ -98,7 +100,7 @@
         <p>
           Our goal is to align technology with your business process, enabling smarter workflows and more agile
           operations.
-        <p>At Cittanuvola, we don’t just offer systems, we build lasting partnerships and deliver transformation that
+        <p>At Cittanuvola, we do not just offer systems, we build lasting partnerships and deliver transformation that
           grows with your vision.
         </p>
       </div>
@@ -202,8 +204,8 @@
   </section>
 
   <!-- NEW: Scroll progress + back-to-top -->
-<script src="js/scroll-top.js" defer></script>
-<script src="js/newsletter.js" defer></script>
+  <script src="js/scroll-top.js" defer></script>
+  <script src="js/newsletter.js" defer></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/hamburger.js" defer></script>
   <script src="js/service-card-observer.js"></script>
@@ -214,110 +216,108 @@
     });
   </script>
 
-<!-- Scroll-to-Top Button -->
-<button id="scrollToTop"
-        class="scroll-top"
-        aria-label="Scroll back to top"
-        title="Back to top">
-  <!-- icon (chevron) -->
-  <svg class="scroll-top__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-    <path fill="currentColor" d="M7.41 14.59 12 10l4.59 4.59L18 13.17 12 7l-6 6z"/>
-  </svg>
-</button>
+  <!-- Scroll-to-Top Button -->
+  <button id="scrollToTop" class="scroll-top" aria-label="Scroll back to top" title="Back to top">
+    <!-- icon (chevron) -->
+    <svg class="scroll-top__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M7.41 14.59 12 10l4.59 4.59L18 13.17 12 7l-6 6z" />
+    </svg>
+  </button>
 
 
-<!-- Join Our Team Section -->
-<section id="join-us" class="join-team-section">
-  <div class="join-team-grid">
+  <!-- Join Our Team Section -->
+  <section id="join-us" class="join-team-section">
+    <div class="join-team-grid">
 
-    <!-- Text Block -->
-    <div class="join-team-text" data-aos="slide-up">
-      <h2><span>Join Our Team</span></h2>
+      <!-- Text Block -->
+      <div class="join-team-text" data-aos="slide-up">
+        <h2><span>Join Our Team</span></h2>
 
-      <p>
-        We're building a team of bold thinkers, problem-solvers, and creators who are passionate about shaping the
-        future of business through technology.
-        At Cittanuvola, you’ll grow, innovate, and make real impact, every day.
+        <p>
+          We're building a team of bold thinkers, problem-solvers, and creators who are passionate about shaping the
+          future of business through technology.
+          At Cittanuvola, you’ll grow, innovate, and make real impact, every day.
 
 
-        <br><br>
-        Ready to build with us?
-      </p>
-      <a href="#" class="join-button"
-        onclick="window.open('mailto:info@cittanuvola.com?subject=Job%20Application%20at%20Cittanuvola&body=Dear%20Cittanuvola%20Team,%0D%0A%0D%0AI%20would%20like%20to%20apply%20for%20a%20role%20at%20Cittanuvola.%20Please%20find%20my%20details%20below.%0D%0A%0D%0AName:%20%0D%0AExperience:%20%0D%0AWhy%20I%20would%20like%20to%20join:%20%0D%0A%0D%0AThank%20you,%0D%0A%5BYour%20Name%5D', '_blank'); return false;">
-        Apply Now
-      </a>
+          <br><br>
+          Ready to build with us?
+        </p>
+        <a href="#" class="join-button"
+          onclick="window.open('mailto:info@cittanuvola.com?subject=Job%20Application%20at%20Cittanuvola&body=Dear%20Cittanuvola%20Team,%0D%0A%0D%0AI%20would%20like%20to%20apply%20for%20a%20role%20at%20Cittanuvola.%20Please%20find%20my%20details%20below.%0D%0A%0D%0AName:%20%0D%0AExperience:%20%0D%0AWhy%20I%20would%20like%20to%20join:%20%0D%0A%0D%0AThank%20you,%0D%0A%5BYour%20Name%5D', '_blank'); return false;">
+          Apply Now
+        </a>
+
+      </div>
+
+      <!-- Image Block -->
+      <div class="join-team-image" data-aos="slide-up">
+        <img src="./images/people-office-work-day.jpg" alt="Join Our Team Celebration">
+      </div>
 
     </div>
+  </section>
 
-    <!-- Image Block -->
-    <div class="join-team-image" data-aos="slide-up">
-      <img src="./images/people-office-work-day.jpg" alt="Join Our Team Celebration">
-    </div>
+  <!-- FOOTER SECTION -->
+  <footer class="footer">
+    <div class="container">
 
-  </div>
-</section>
-
-<!-- FOOTER SECTION -->
-<footer class="footer">
-  <div class="container">
-
-    <!-- Top Row: Logo + Nav + Icons -->
-    <div class="footer-top-row">
-      <div class="footer-brand">
-        <div class="logo">
-          <span class="blue">Citta</span><span class="yellow">nuvola</span>
+      <!-- Top Row: Logo + Nav + Icons -->
+      <div class="footer-top-row">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="blue">Citta</span><span class="yellow">nuvola</span>
+          </div>
         </div>
+
+        <div class="footer-nav">
+          <a href="#About-us-section">About Us</a>
+          <a href="#our-service-section">Our Service</a>
+          <a href="#join-us">Join Us</a>
+          <a href="./citta-erp.html" target="_blank" rel="noopener">CittaERP</a>
+        </div>
+
+        <div class="footer-icons">
+          <a href="https://www.linkedin.com/company/cittanuvola" target="_blank" rel="noopener">
+            <img src="./images/linkedin-icon.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener">
+            <img src="./images/facebook-icon.png" alt="Facebook" />
+          </a>
+          <a href="https://www.twitter.com" target="_blank" rel="noopener">
+            <img src="./images/twitter-icon.svg" alt="Twitter" />
+          </a>
+        </div>
+
       </div>
 
-      <div class="footer-nav">
-        <a href="#About-us-section">About Us</a>
-        <a href="#our-service-section">Our Service</a>
-        <a href="#join-us">Join Us</a>
-        <a href="./citta-erp.html" target="_blank" rel="noopener">CittaERP</a>
+      <!-- Main Content Row: Contact + Newsletter -->
+      <div class="footer-main">
+        <div class="footer-contact">
+          <div class="contact-label">Contact us:</div>
+          <p>Email: info@cittanuvola.com</p>
+          <p>Phone: <a href="tel:08134248104" class="phone-link">0813–424–8104</a></p>
+          <p>Address: 5, Sadiku Street, Agidingbi<br />
+            Ikeja, Lagos, Nigeria</p>
+        </div>
+
+        <div class="footer-newsletter">
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <input type="email" name="email" placeholder="Email" required />
+            <button type="submit" id="newsletterSubmit">Subscribe to news</button>
+          </form>
+          <div id="newsletterStatus" aria-live="polite"></div>
+        </div>
+
+
       </div>
 
-      <div class="footer-icons">
-        <a href="https://www.linkedin.com/company/cittanuvola" target="_blank" rel="noopener">
-          <img src="./images/linkedin-icon.svg" alt="LinkedIn" />
-        </a>
-        <a href="https://www.facebook.com" target="_blank" rel="noopener">
-          <img src="./images/facebook-icon.png" alt="Facebook" />
-        </a>
-        <a href="https://www.twitter.com" target="_blank" rel="noopener">
-          <img src="./images/twitter-icon.svg" alt="Twitter" />
-        </a>
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>© 2025 Cittanuvola. All Rights Reserved. <a href="#">Privacy Policy</a></p>
       </div>
 
     </div>
-
-    <!-- Main Content Row: Contact + Newsletter -->
-    <div class="footer-main">
-      <div class="footer-contact">
-        <div class="contact-label">Contact us:</div>
-        <p>Email: info@cittanuvola.com</p>
-        <p>Phone: <a href="tel:08134248104" class="phone-link">0813–424–8104</a></p>
-        <p>Address: 5, Sadiku Street, Agidingbi<br />
-          Ikeja, Lagos, Nigeria</p>
-      </div>
-
-      <div class="footer-newsletter">
-  <form class="newsletter-form" id="newsletterForm" novalidate>
-    <input type="email" name="email" placeholder="Email" required />
-    <button type="submit" id="newsletterSubmit">Subscribe to news</button>
-  </form>
-  <div id="newsletterStatus" aria-live="polite"></div>
-</div>
-
-
-    </div>
-
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <p>© 2025 Cittanuvola. All Rights Reserved. <a href="#">Privacy Policy</a></p>
-    </div>
-
-  </div>
-</footer>
+  </footer>
 </body>
+
 </html>
