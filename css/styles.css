@@ -23,13 +23,6 @@ body {
 
 
 
-.logo img {
-  height: 40px;   /* good navbar size */
-  width: auto;    /* keeps aspect ratio */
-  display: block; /* removes inline spacing */
-}
-
-
 .nav-links a {
   margin-left: 20px;
   text-decoration: none;
@@ -126,6 +119,9 @@ main[id] {
   justify-content: space-between;
   align-items: center;
 }
+
+
+ 
 
 /* HERO */
 .hero {
@@ -935,7 +931,6 @@ main[id] {
 
   /* Navbar adjustments */
   .navbar { padding: 10px 16px; }
-  .logo { font-size: 32px; }
 
   /* Hero section stacking */
   .hero-content {
@@ -1023,3 +1018,32 @@ button, .cta-btn, .cta-btn-1, .nav-links a {
 }
 
 
+/* === FINAL: Stronger mobile alignment overrides === */
+.logo { display: flex; align-items: center; }
+.logo img { height: 48px; width: auto; display: block; }
+
+@media (max-width: 600px) {
+  /* Put the logo + hamburger in a full-width flex row */
+  .navbar-inner { 
+    display: block;         /* avoid nested flex weirdness */
+    position: relative; 
+  }
+  .navbar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 15px;
+  }
+  /* Override the absolute positioning (note the higher specificity) */
+  .navbar .hamburger {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    display: inline-flex !important;
+    margin-left: auto;
+  }
+  .navbar .logo img {
+    height: 32px; /* neat size on phones */
+  }
+}
