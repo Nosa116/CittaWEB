@@ -18,7 +18,7 @@ body {
   font-family: 'Rethink Sans', sans-serif;
   line-height: 1.6;
   color: #030B1D;
-  background-color: #fefefe;
+  background-color: #F9FBFC;
 }
 
 
@@ -99,7 +99,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 999;
-  background-color: #fefefe;
+  background-color: #F9FBFC;
   padding: 20px 60px;
 }
 
@@ -190,7 +190,7 @@ main[id] {
 
 /* ERP SECTION */
 .erp-section {
-  background-color: #F9FBFC;
+  background-color: #D0E4FB;
   padding: 50px 60px;
   /* remove horizontal padding */
 }
@@ -227,7 +227,7 @@ main[id] {
 /* ─── Features Section (tweaked) ────────────────────────────────────────────────── */
 .features-section {
   padding: 50px 60px;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 .features-section .section-title {
   text-align: center;
@@ -302,8 +302,7 @@ main[id] {
 
 .benefits-section {
   padding: 50px 60px;
-  border-bottom: 1px solid #030B1D;
-  background-color: #fefefe;
+  background-color: #F9FBFC;
 }
 
 .benefits-header {
@@ -330,7 +329,7 @@ main[id] {
 }
 
 .benefit-card {
-  background-color: #F4F4F4;
+  background-color: #Fefefe;
   padding: 24px;
   border-radius: 20px;
   border: 1px solid #030B1D;
@@ -1020,7 +1019,7 @@ button, .cta-btn, .cta-btn-1, .nav-links a {
 
 /* === FINAL: Stronger mobile alignment overrides === */
 .logo { display: flex; align-items: center; }
-.logo img { height: 48px; width: auto; display: block; }
+.logo img { height: 40px; width: auto; display: block; }
 
 @media (max-width: 600px) {
   /* Put the logo + hamburger in a full-width flex row */
