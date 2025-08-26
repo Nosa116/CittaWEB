@@ -520,9 +520,9 @@ header.navbar {
 
 
 /* Override specifically for every 3rd card */
-.services-grid .service-item:nth-child(3n):hover .service-title,
-.services-grid .service-item:nth-child(3n):hover .service-number,
-.services-grid .service-item:nth-child(3n):hover .service-description {
+.services-grid .service-item:nth-child(3n+2):hover .service-title,
+.services-grid .service-item:nth-child(3n+2):hover .service-number,
+.services-grid .service-item:nth-child(3n+2):hover .service-description {
   color: #030B1D; /* dark text */
 }
 
@@ -532,11 +532,11 @@ header.navbar {
 }
 
 .services-grid .service-item:nth-child(3n + 2) {
-  --accent: #00297b;
+  --accent: #FFBA08;
 }
 
 .services-grid .service-item:nth-child(3n) {
-  --accent: #FFBA08;
+  --accent: #00297b ;
 }
 
 /* Normal (non-hover) title colour -----------------------*/
