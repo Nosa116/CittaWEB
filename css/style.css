@@ -306,6 +306,7 @@ header.navbar {
   font-size: 20px;
   color: white;
   line-height: 1.5;
+  text-align: justify;
 }
 
 .section-heading {
@@ -481,6 +482,7 @@ header.navbar {
   font-size: 18px;
   color: #030B1D;
   line-height: 1.7;
+  text-align: justify;
 }
 
 
@@ -514,6 +516,14 @@ header.navbar {
 .service-item:hover .service-description {
   color: #fff;
   /* text flips to white */
+}
+
+
+/* Override specifically for every 3rd card */
+.services-grid .service-item:nth-child(3n):hover .service-title,
+.services-grid .service-item:nth-child(3n):hover .service-number,
+.services-grid .service-item:nth-child(3n):hover .service-description {
+  color: #030B1D; /* dark text */
 }
 
 /* Assign an accent colour to each card ------------------*/
@@ -578,6 +588,7 @@ header.navbar {
   font-size: 16px;
   color: #444;
   line-height: 1.6;
+  text-align: justify;
 }
 
 @media (max-width: 768px) {
@@ -662,6 +673,7 @@ strong {
 
 .join-team-text p {
   font-size: 16px;
+  text-align: justify;
   line-height: 1.6;
   margin-bottom: 30px;
   color: #000;
@@ -1178,3 +1190,4 @@ html {
   padding-left: 6px;
   opacity: 1;
 }
+
