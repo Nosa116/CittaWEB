@@ -15,6 +15,10 @@
 
 
   <link rel="stylesheet" href="css/styles.css" />
+   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -22,6 +26,32 @@
   <!-- Google Fonts: Rethink Sans -->
   <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap"
     rel="stylesheet">
+
+
+    <!-- Primary Meta Tags -->
+<title>CittaERP – Cloud ERP Software for Business Efficiency</title>
+<meta name="title" content="CittaERP – Cloud ERP Software for Business Efficiency">
+<meta name="description" content="CittaERP is an all-in-one enterprise resource planning platform. Manage finance, HR, sales, procurement, and inventory in one powerful, cloud-based ERP solution.">
+
+<!-- Keywords -->
+<meta name="keywords" content="ERP software, cloud ERP, enterprise resource planning, finance software, HR management, sales and inventory system, CittaERP, Nigeria ERP solutions">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://www.cittanuvola.com/citta-erp.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.cittanuvola.com/citta-erp.html">
+<meta property="og:title" content="CittaERP – Cloud ERP Software for Business Efficiency">
+<meta property="og:description" content="Streamline your operations with CittaERP: finance, HR, sales, procurement, and inventory in one centralized cloud ERP platform.">
+<meta property="og:image" content="https://www.cittanuvola.com/images/CittaERP-logo.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.cittanuvola.com/citta-erp.html">
+<meta name="twitter:title" content="CittaERP – Cloud ERP Software for Business Efficiency">
+<meta name="twitter:description" content="CittaERP helps businesses scale with cloud ERP software for finance, HR, and operations.">
+<meta name="twitter:image" content="https://www.cittanuvola.com/images/CittaERP-logo.png">
 
 </head>
 
@@ -325,17 +355,51 @@
   </section>
 
   <!-- DEMO MODAL -->
-  <div id="demoModal" class="modal-overlay">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
-      <h2>Request a Demo</h2>
-      <p>Fill out the form and our team will reach out shortly.</p>
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLScUQEY5Jlikyy0Yd1YI9NmLfjgRAPAa4mA_0KCCergI-ejU6g/viewform?embedded=true"
-        width="640" height="956" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<!-- DEMO MODAL -->
+<div id="demoModal" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>Request a Demo</h2>
+    <p>Fill out the form and our team will reach out shortly.</p>
 
-    </div>
+    <form id="demoForm" novalidate>
+      <div class="form-row">
+        <label for="fullName">Full Name *</label>
+        <input type="text" id="fullName" name="fullName" required />
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required
+       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+       title="Please enter a valid email address">
+
+      </div>
+
+      <div class="form-row">
+        <label for="company">Company Name *</label>
+        <input type="text" id="company" name="company" required />
+      </div>
+
+      <div class="form-row">
+        <label for="jobRole">Job Role</label>
+        <input type="text" id="jobRole" name="jobRole" />
+      </div>
+
+      <div class="form-row">
+        <label for="industry">Industry</label>
+        <input type="text" id="industry" name="industry" />
+      </div>
+
+      <!-- honeypot (spam protection) -->
+      <input type="text" name="website" id="website" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;opacity:0" aria-hidden="true" />
+
+      <button type="submit" id="submitBtn">Send Request</button>
+      <p id="formMsg" role="status" aria-live="polite" style="margin-top:10px;"></p>
+    </form>
   </div>
+</div>
+
 
 
   <!-- FOOTER SECTION -->
@@ -346,7 +410,9 @@
       <div class="footer-top-row">
         <div class="footer-brand">
           <div class="logo">
-            <span class="blue">Citta</span><span class="yellow">erp</span>
+            <a href="index.html">
+          <img src="./images/CittaERP-logo.png" alt="Cittanuvola Logo">
+        </a>
           </div>
         </div>
 
@@ -403,6 +469,8 @@
 
   <script src="./js/carousel.js"></script>
   <script src="./js/auto-swipe.js"></script>
+  <script src="js/demo-form.js"></script>
+
   <script src="./js/section-scroll.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
@@ -449,6 +517,7 @@
       });
     });
   </script>
+
 
 
 </body>

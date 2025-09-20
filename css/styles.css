@@ -1046,3 +1046,13 @@ button, .cta-btn, .cta-btn-1, .nav-links a {
     height: 32px; /* neat size on phones */
   }
 }
+
+/* minimal modal form styling */
+.modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.6); align-items:center; justify-content:center; padding:1rem; }
+.modal-content { background:#fff; max-width:640px; width:100%; border-radius:10px; padding:24px; position:relative; }
+.close-btn { position:absolute; right:14px; top:10px; cursor:pointer; font-size:28px; line-height:1; }
+
+#demoForm .form-row { display:flex; flex-direction:column; gap:.4rem; margin-bottom:12px; }
+#demoForm input { padding:.7rem .9rem; border:1px solid #ddd; border-radius:8px; font-size:1rem; }
+#demoForm button { padding:.8rem 1.2rem; border:0; border-radius:8px; cursor:pointer; font-weight:600; }
+#demoForm button[disabled] { opacity:.7; cursor:not-allowed; }
