@@ -286,7 +286,13 @@
 
       <!-- Image Block -->
       <div class="join-team-image" data-aos="slide-up">
-        <img src="./images/people-office-work-day.jpg" alt="Join Our Team Celebration">
+        <picture>
+                <!-- modern browsers will take this -->
+                <source srcset="./images/people-office-work-day.webp" type="image/webp">
+                <!-- fallback for older browsers -->
+                <img src="./images/people-office-work-day.jpg" alt="Join Our Team Celebration" loading="eager"
+                  decoding="async" >
+              </picture>
       </div>
 
     </div>
