@@ -50,9 +50,9 @@ try {
   $mail->Port       = 587;
 
   // From / To
-  $mail->setFrom('olugbenga.ezekiel@cittanuvola.com', 'CittaERP Demo Bot');
+  $mail->setFrom('info1@cittanuvola.com', 'CittaERP Demo Bot');
   // where you want to receive the requests:
-  $mail->addAddress('olugbenga.ezekiel@cittanuvola.com', 'Sales Team');
+  $mail->addAddress('info1@cittanuvola.com', 'Sales Team');
 
   // Optional: reply-to the requester
   $mail->addReplyTo($email, $fullName);
