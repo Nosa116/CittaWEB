@@ -44,8 +44,8 @@ try {
   $mail->isSMTP();
   $mail->Host       = 'mail.cittanuvola.com';  // e.g., mail.cittanuvola.com
   $mail->SMTPAuth   = true;
-  $mail->Username   = 'olugbenga.ezekiel@cittanuvola.com';
-  $mail->Password   = 'Citta18042025';
+  $mail->Username   = 'info1@cittanuvola.com';
+  $mail->Password   = 'Info24Citta$';
   $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // or PHPMailer::ENCRYPTION_SMTPS for 465
   $mail->Port       = 587;
 
